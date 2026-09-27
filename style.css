@@ -1,0 +1,1352 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1F2937;
+    background-color: #FFFFFF;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 18px 60px;
+
+    background: rgba(220, 235, 227, 0.96);
+    border-bottom: 2px solid #2E7D6B;
+    backdrop-filter: blur(10px);
+}
+
+.brand-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.brand-nome {
+    color: #275F52;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    line-height: 1.1;
+    transition: color 0.3s ease;
+}
+
+.brand-profissao {
+    color: #5F746D;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.brand-link:hover .brand-nome {
+    color: #A85F3D;
+}
+
+header {
+    transition:
+        box-shadow 0.35s ease,
+        background-color 0.35s ease;
+}
+
+header.header-scrolled {
+    box-shadow: 0 8px 25px rgba(31, 73, 63, 0.10);
+}
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navegacao a {
+    position: relative;
+    color: #275F52;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #D99A72;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #A85F3D;
+}
+
+.navegacao a:hover::after {
+    width: 18px;
+}
+
+/* =========================
+   BOTÃO MENU MOBILE
+========================= */
+
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: #275F52;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* =========================
+   WHATSAPP DO HEADER
+========================= */
+
+.header-whatsapp {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 17px;
+    background: #2E7D6B;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid #256957;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.header-whatsapp:hover {
+    background: #A85F3D;
+    transform: translateY(-2px);
+}
+
+.seta {
+    font-size: 16px;
+    line-height: 1;
+}
+
+
+/* =========================
+   ACESSIBILIDADE E FOCO
+========================= */
+
+.navegacao a:focus-visible,
+.header-whatsapp:focus-visible,
+.botao-principal:focus-visible,
+.clinica-botao:focus-visible,
+.contato-botao:focus-visible,
+.brand-link:focus-visible,
+.menu-mobile:focus-visible {
+    outline: 2px solid #A85F3D;
+    outline-offset: 4px;
+}
+
+.menu-mobile {
+    border-radius: 5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 60px;
+    background-color: #F7F5EF;
+}
+
+.conteudo-textual {
+    flex: 1;
+    max-width: 520px;
+}
+
+.conteudo-textual > p:first-child {
+    font-size: 43px;
+    line-height: 1.15;
+    color: #1F2937;
+    margin-bottom: 30px;
+}
+
+.conteudo-textual a {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #2E7D6B;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.conteudo-textual a:hover {
+    background-color: #A85F3D;
+    transform: translateY(-2px);
+}
+
+.registro {
+    font-size: 13px;
+    color: #687280;
+    margin-top: 20px;
+}
+
+/* =========================
+   HERO - INFORMAÇÃO CENTRAL
+========================= */
+
+.hero-manifesto {
+    flex: 1;
+    max-width: 430px;
+    padding: 12px 25px 12px 35px;
+    border-left: 1px solid #A7C4B0;
+}
+
+.hero-manifesto-label {
+    color: #A85F3D;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero-manifesto h2 {
+    color: #275F52;
+    font-size: 29px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.hero-manifesto-text {
+    color: #687280;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 380px;
+    margin-bottom: 25px;
+}
+
+.hero-destaques {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-destaque {
+    display: flex;
+    gap: 18px;
+    padding: 14px 0;
+    border-top: 1px solid #C4D5CC;
+    transition: padding-left 0.3s ease;
+}
+
+.hero-destaque:last-child {
+    border-bottom: 1px solid #C4D5CC;
+}
+
+.hero-destaque:hover {
+    padding-left: 7px;
+}
+
+.hero-destaque > span {
+    color: #D99A72;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 3px;
+    min-width: 20px;
+}
+
+.hero-destaque h3 {
+    color: #1F2937;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.hero-destaque p {
+    color: #687280;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================
+   FOTO PRINCIPAL
+========================= */
+
+#inicio .imagem {
+    flex: 0 0 360px;
+    margin-left: -10px;
+}
+
+#inicio .imagem img {
+    display: block;
+    width: 360px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+========================= */
+
+.section-label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #2E7D6B;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.section-label::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #D99A72;
+}
+
+.brincar-label {
+    color: #A85F3D;
+}
+
+.contato-label {
+    color: #DCEBE3;
+}
+
+.contato-label::before {
+    background-color: #D99A72;
+}
+
+/* =========================
+   SOBRE
+========================= */
+
+#sobre {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 90px 60px;
+    background-color: #DCEBE3;
+}
+
+.sobre-imagem {
+    flex: 0 0 48%;
+}
+
+.sobre-imagem img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.sobre-conteudo {
+    flex: 1;
+    max-width: 600px;
+}
+
+.sobre-conteudo h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #1F2937;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p {
+    color: #687280;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   ATUAÇÃO
+========================= */
+
+#atuacao {
+    padding: 100px 60px;
+    background-color: #EDE4D5;
+}
+
+.atuacao-introducao {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.atuacao-introducao h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #1F2937;
+    margin-bottom: 25px;
+}
+
+.atuacao-introducao > p:last-child {
+    color: #687280;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.atuacao-areas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.area {
+    padding: 30px 0;
+    border-top: 2px solid #2E7D6B;
+}
+
+.area span {
+    display: block;
+    color: #2E7D6B;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.area h3 {
+    font-size: 22px;
+    color: #1F2937;
+    margin-bottom: 15px;
+}
+
+.area p {
+    color: #687280;
+    line-height: 1.6;
+}
+
+/* =========================
+   O BRINCAR
+========================= */
+
+#brincar {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 90px 60px;
+    background-color: #F1D4C1;
+}
+
+.brincar-imagem {
+    flex: 0 0 50%;
+}
+
+.brincar-imagem img {
+    display: block;
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.brincar-conteudo {
+    flex: 1;
+    max-width: 600px;
+}
+
+.brincar-conteudo h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #1F2937;
+    margin-bottom: 25px;
+}
+
+.brincar-conteudo p {
+    color: #5F6460;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+#como-funciona {
+    padding: 100px 60px;
+    background-color: #FFFFFF;
+}
+
+.processo-introducao {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.processo-introducao h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #1F2937;
+}
+
+.processo-etapas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.etapa {
+    padding: 30px 0;
+    border-top: 2px solid #A7C4B0;
+}
+
+.etapa span {
+    display: block;
+    color: #2E7D6B;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.etapa h3 {
+    font-size: 22px;
+    color: #1F2937;
+    margin-bottom: 15px;
+}
+
+.etapa p {
+    color: #687280;
+    line-height: 1.6;
+}
+
+/* =========================
+   TRAJETÓRIA
+========================= */
+
+#trajetoria {
+    padding: 100px 60px;
+    background-color: #DCEBE3;
+}
+
+.trajetoria-introducao {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.trajetoria-introducao h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #1F2937;
+    margin-bottom: 25px;
+}
+
+.trajetoria-introducao > p:last-child {
+    color: #687280;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.trajetoria-linha {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1100px;
+}
+
+.trajetoria-item {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #A7C4B0;
+}
+
+.trajetoria-conteudo {
+    flex: 1;
+    max-width: 700px;
+}
+
+.trajetoria-data {
+    color: #2E7D6B;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.trajetoria-conteudo h3 {
+    font-size: 25px;
+    color: #1F2937;
+    margin-bottom: 12px;
+}
+
+.trajetoria-conteudo p {
+    color: #687280;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.trajetoria-detalhe {
+    color: #5F6460 !important;
+}
+
+/* Imagens dos três momentos */
+
+.trajeto-academico {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.trajetoria-academica-imagem {
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #F7F5EF;
+}
+
+.trajetoria-academica-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trajeto-formacao {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.trajetoria-formacao-imagem {
+    width: 300px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #F7F5EF;
+}
+
+.trajetoria-formacao-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trajeto-clinica {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.trajetoria-clinica-imagem {
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trajetoria-clinica-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 25px;
+}
+
+/* =========================
+   CLÍNICA
+========================= */
+
+#clinica {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 55px;
+    padding: 120px 60px;
+    background-color: #EDE4D5;
+}
+
+.clinica-conteudo {
+    max-width: 650px;
+}
+
+.clinica-conteudo h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    color: #1F2937;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.clinica-conteudo > p:not(.section-label) {
+    color: #687280;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.clinica-dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #A7C4B0;
+}
+
+.dado-clinica span {
+    display: block;
+    color: #2E7D6B;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.dado-clinica p {
+    color: #1F2937;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.clinica-botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 22px;
+    background-color: transparent;
+    color: #2E7D6B;
+    text-decoration: none;
+    border: 1px solid #2E7D6B;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.clinica-botao:hover {
+    background-color: #2E7D6B;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.clinica-mapa {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #D8CCBA;
+}
+
+.clinica-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+#contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    padding: 100px 60px;
+    background-color: #275F52;
+    color: #FFFFFF;
+}
+
+.contato-conteudo {
+    max-width: 700px;
+}
+
+.contato-conteudo h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.contato-conteudo > p:not(.contato-label) {
+    max-width: 550px;
+    color: #E8F0EC;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contato-botao {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    color: #275F52;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.contato-botao:hover {
+    background-color: #F7F5EF;
+    transform: translateY(-2px);
+}
+
+.contato-info {
+    min-width: 250px;
+    padding-top: 30px;
+    border-top: 1px solid #A7C4B0;
+}
+
+.contato-info p {
+    margin-bottom: 8px;
+    color: #E8F0EC;
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 60px;
+    background-color: #1F493F;
+    color: #FFFFFF;
+}
+
+.footer-identidade {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-identidade strong {
+    font-size: 15px;
+}
+
+.footer-identidade span,
+.footer-registro {
+    font-size: 12px;
+    color: #CFE0D9;
+}
+
+/* =========================
+   ANIMAÇÕES DE ENTRADA
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+    header {
+        padding: 18px 30px;
+    }
+
+    .navegacao {
+        gap: 18px;
+    }
+
+    #inicio {
+        padding: 50px 30px;
+        gap: 25px;
+    }
+
+    #inicio .imagem {
+        flex: 0 0 330px;
+    }
+
+    #inicio .imagem img {
+        width: 330px;
+        height: 430px;
+    }
+
+    .hero-manifesto {
+        max-width: 350px;
+        padding-left: 25px;
+    }
+
+    .hero-manifesto h2 {
+        font-size: 25px;
+    }
+
+    #sobre,
+    #brincar {
+        padding: 80px 30px;
+    }
+
+    #atuacao,
+    #como-funciona,
+    #trajetoria {
+        padding: 80px 30px;
+    }
+
+    #clinica,
+    #contato {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .atuacao-areas,
+    .processo-etapas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trajeto-academico,
+    .trajeto-formacao,
+    .trajeto-clinica {
+        grid-template-columns: 260px 1fr;
+        gap: 30px;
+    }
+
+    .trajetoria-academica-imagem,
+    .trajetoria-formacao-imagem,
+    .trajetoria-clinica-imagem {
+        width: 260px;
+    }
+}
+
+/* =========================
+   MENU MOBILE / TABLET
+========================= */
+
+@media (max-width: 900px) {
+    header {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 25px;
+    }
+
+    .brand {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .menu-mobile {
+        display: block;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: 15px;
+        z-index: 1002;
+    }
+
+    .navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        padding: 20px 25px;
+        background: #DCEBE3;
+        border-bottom: 1px solid #A7C4B0;
+        box-shadow: 0 10px 25px rgba(31, 73, 63, 0.08);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transform-origin: top;
+
+        transition:
+            opacity 0.35s ease,
+            transform 0.35s ease,
+            visibility 0.35s ease;
+    }
+
+    .navegacao.aberto {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navegacao a {
+        width: 100%;
+        padding: 13px 0;
+        font-size: 14px;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition:
+            opacity 0.35s ease,
+            transform 0.35s ease,
+            color 0.3s ease;
+    }
+
+    .navegacao.aberto a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .navegacao.aberto a:nth-child(1) { transition-delay: 0.05s; }
+    .navegacao.aberto a:nth-child(2) { transition-delay: 0.10s; }
+    .navegacao.aberto a:nth-child(3) { transition-delay: 0.15s; }
+    .navegacao.aberto a:nth-child(4) { transition-delay: 0.20s; }
+    .navegacao.aberto a:nth-child(5) { transition-delay: 0.25s; }
+    .navegacao.aberto a:nth-child(6) { transition-delay: 0.30s; }
+
+    .navegacao a::after {
+        display: none;
+    }
+
+    #inicio {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 60px 25px;
+    }
+
+    .conteudo-textual {
+        max-width: 700px;
+    }
+
+    .hero-manifesto {
+        max-width: 700px;
+        padding: 30px 0 0;
+        border-left: none;
+        border-top: 1px solid #A7C4B0;
+    }
+
+    #inicio .imagem {
+        width: 100%;
+        margin-left: 0;
+        flex: none;
+    }
+
+    #inicio .imagem img {
+        width: 100%;
+        height: 460px;
+    }
+
+    #sobre,
+    #brincar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        padding: 70px 25px;
+    }
+
+    .sobre-imagem,
+    .brincar-imagem {
+        flex: none;
+    }
+
+    .sobre-imagem img,
+    .brincar-imagem img {
+        width: 100%;
+        height: 450px;
+    }
+
+    #atuacao,
+    #como-funciona,
+    #trajetoria {
+        padding: 70px 25px;
+    }
+
+    #clinica {
+        grid-template-columns: 1fr;
+        padding: 80px 25px;
+        gap: 45px;
+    }
+
+    .clinica-conteudo h2 {
+        font-size: 42px;
+    }
+
+    .clinica-mapa {
+        height: 400px;
+    }
+
+    #contato {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 25px;
+    }
+
+    .contato-conteudo h2 {
+        font-size: 38px;
+    }
+
+    .contato-info {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+    }
+
+    .trajeto-academico,
+    .trajeto-formacao,
+    .trajeto-clinica {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .trajetoria-academica-imagem,
+    .trajetoria-formacao-imagem,
+    .trajetoria-clinica-imagem {
+        width: 100%;
+        height: 230px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .brand-nome {
+        font-size: 19px;
+    }
+
+    .brand-profissao {
+        font-size: 10px;
+    }
+
+    .header-whatsapp {
+        padding: 10px 12px;
+    }
+
+    #inicio {
+        padding: 50px 25px;
+    }
+
+    .conteudo-textual > p:first-child {
+        font-size: 36px;
+    }
+
+    .hero-manifesto h2 {
+        font-size: 27px;
+    }
+
+    #sobre,
+    #atuacao,
+    #brincar,
+    #como-funciona,
+    #trajetoria,
+    #clinica,
+    #contato {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .atuacao-areas,
+    .processo-etapas {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-conteudo h2,
+    .atuacao-introducao h2,
+    .processo-introducao h2,
+    .trajetoria-introducao h2,
+    .brincar-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .sobre-imagem img,
+    .brincar-imagem img {
+        height: 400px;
+    }
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+    .brand-nome {
+        font-size: 17px;
+    }
+
+    .brand-profissao {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .header-whatsapp span:first-child {
+        display: none;
+    }
+
+    .header-whatsapp {
+        padding: 10px 12px;
+    }
+
+    #inicio {
+        padding: 50px 20px;
+    }
+
+    .conteudo-textual > p:first-child {
+        font-size: 31px;
+    }
+
+    .hero-manifesto h2 {
+        font-size: 25px;
+    }
+
+    #inicio .imagem img {
+        height: 390px;
+    }
+
+    #sobre,
+    #atuacao,
+    #brincar,
+    #como-funciona,
+    #trajetoria,
+    #clinica,
+    #contato {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sobre-imagem img,
+    .brincar-imagem img {
+        height: 360px;
+    }
+
+    .trajetoria-academica-imagem,
+    .trajetoria-formacao-imagem,
+    .trajetoria-clinica-imagem {
+        height: 210px;
+    }
+
+    .clinica-dados {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* =========================
+   ANIMAÇÃO DAS ETAPAS
+========================= */
+
+.etapa-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+}
+
+.etapa-reveal.etapa-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   ACESSIBILIDADE
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .reveal,
+    .reveal.visivel,
+    .trajetoria-reveal,
+    .trajetoria-reveal.trajetoria-visivel,
+    .etapa-reveal,
+    .etapa-reveal.etapa-visivel {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =========================
+   ANIMAÇÃO DA TRAJETÓRIA
+========================= */
+
+.trajetoria-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.trajetoria-reveal.trajetoria-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
